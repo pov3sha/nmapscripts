@@ -1,0 +1,16 @@
+# Credentials and keys
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.env
+.env*
+secrets*
+
+# OS / editor / temp files
+.DS_Store
+*.swp
+*~
+__pycache__/
+*.pyc
+scan-output.txt
