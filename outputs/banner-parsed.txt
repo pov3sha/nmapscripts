@@ -1,0 +1,30 @@
+$ nmap -Pn -n -p 22,2222,2224,2225 --script banner-parsed --script-args banner-parsed.timeout=2 127.0.0.1
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-10-14 18:01 IST
+Nmap scan report for 127.0.0.1
+Host is up (0.00014s latency).
+
+PORT     STATE SERVICE
+22/tcp   open  ssh
+| banner-parsed: 
+|   banner: SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.5\x0D\x0A
+|   type: ssh
+|   protocol_version: 2.0
+|   software: OpenSSH_9.6p1
+|_  comments: Ubuntu-3ubuntu13.5
+2222/tcp open  EtherNetIP-1
+| banner-parsed: 
+|   banner: SSH-2.0-LabServer_1.0 lab-test\x0D\x0A
+|   type: ssh
+|   protocol_version: 2.0
+|   software: LabServer_1.0
+|_  comments: lab-test
+2224/tcp open  efi-mg
+| banner-parsed: 
+|   banner: 220 lab.example ESMTP ready\x0D\x0A
+|   type: numeric-reply
+|   reply_code: 220
+|   multiline: no
+|_  text: lab.example ESMTP ready
+2225/tcp open  rcp
+
+Nmap done: 1 IP address (1 host up) scanned in 2.04 seconds

@@ -1,0 +1,34 @@
+$ nmap -Pn -n -p 22,2222,2224,2225 --script banner-timing --script-args banner-timing.timeout=2 127.0.0.1
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-10-14 18:02 IST
+Nmap scan report for 127.0.0.1
+Host is up (0.00011s latency).
+
+PORT     STATE SERVICE
+22/tcp   open  ssh
+| banner-timing: 
+|   banner: SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.5\x0D\x0A
+|   source: new connection
+|   elapsed_ms: 3
+|   bytes: 41
+|_  lines: 1
+2222/tcp open  EtherNetIP-1
+| banner-timing: 
+|   banner: SSH-2.0-LabServer_1.0 lab-test\x0D\x0A
+|   source: new connection
+|   elapsed_ms: 2
+|   bytes: 33
+|_  lines: 1
+2224/tcp open  efi-mg
+| banner-timing: 
+|   banner: 220 lab.example ESMTP ready\x0D\x0A
+|   source: new connection
+|   elapsed_ms: 2
+|   bytes: 29
+|_  lines: 1
+2225/tcp open  rcp
+| banner-timing: 
+|   result: no banner received
+|   reason: TIMEOUT
+|_  elapsed_ms: 2004
+
+Nmap done: 1 IP address (1 host up) scanned in 2.05 seconds
